@@ -14,7 +14,6 @@ textarea {
   border-radius: 15px;
   padding: 10px;
   height: 75px;
-  background-color: red;
 }
 
 .jumbotron {
@@ -79,7 +78,7 @@ label {
   padding: 35px;
 }
 
-.saveBtn i:hover {
+.saveBtn:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
