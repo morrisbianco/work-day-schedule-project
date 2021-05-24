@@ -10,31 +10,19 @@ textarea {
   resize: none;
   color: #000000;
   border-left: 1px solid black;
-  border-right: 1px solid black;
-  border-radius: 15px;
   padding: 10px;
-  height: 75px;
 }
 
 .jumbotron {
   text-align: center;
-  background-color: whitesmoke;
+  background-color: transparent;
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
 }
 
-#currentDay {
-  padding-top: 16px;
-}
-
 .description {
   white-space: pre-wrap;
-}
-
-label {
-  float: right;
-  margin-top: 10px;
 }
 
 .time-block {
@@ -51,8 +39,7 @@ label {
 .hour {
   background-color: #ffffff;
   color: #000000;
-  border-top: 2px dashed #000000;
-  padding-top: 5px;
+  border-top: 1px dashed #000000;
 }
 
 .past {
@@ -71,14 +58,15 @@ label {
 }
 
 .saveBtn {
-  border: 2px solid black;
-  border-radius: 15px;
+  border-left: 1px solid black;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
-  padding: 35px;
 }
 
-.saveBtn:hover {
+.saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
