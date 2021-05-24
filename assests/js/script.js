@@ -1,3 +1,4 @@
+
 var buttons = document.querySelector(".container");
 var currentHour = moment().format("H");
 var currentDay = moment();
@@ -28,19 +29,20 @@ function checkTime() {
 var todoList = JSON.parse(localStorage.getItem("todos")) || [];
 
 
-buttons.addEventListener("click", function (event) {
-    event.preventDefault();
-    var element = event.target
-    
-    if (element.matches(".saveBtn")) {
-        var text = element.previousSibling.previousSibling.value;
-        var id = element.previousSibling.previousSibling.attributes.index.value;
+$(document).ready(function() { 
+    $("button").click(function (event) {
+        event.preventDefault();
+        var element = event.currentTarget
         
-        todoList = todoList.concat([{todoText: text, todoId: id}]);
-
-        localStorage.setItem("todos", JSON.stringify(todoList));
-
-    }
+        if (element.matches(".saveBtn")) {
+            var text = element.previousSibling.previousSibling.value;
+            var id = element.previousSibling.previousSibling.attributes.index.value;
+            console.log(element);
+            todoList = todoList.concat([{todoText: text, todoId: id}]);
+    
+            localStorage.setItem("todos", JSON.stringify(todoList));
+        }
+    })
 });
 
 function renderTodoList() {
