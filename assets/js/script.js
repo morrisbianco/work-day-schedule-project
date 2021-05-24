@@ -37,7 +37,6 @@ $(document).ready(function() {
         if (element.matches(".saveBtn")) {
             var text = element.previousSibling.previousSibling.value;
             var id = element.previousSibling.previousSibling.attributes.index.value;
-            console.log(element);
             todoList = todoList.concat([{todoText: text, todoId: id}]);
     
             localStorage.setItem("todos", JSON.stringify(todoList));
